@@ -9,7 +9,7 @@ include("views/header.php");
     ///Game Dev
     ///CAD Designer/Technician
     ///Game Host
-    echo"<h1>I'm Garrett Tallent</h1>";
-    
+    echo"<h1>HI THIS IS A CRON JOB TEST</h1>";
+
 include("views/footer.php");
 ?>
