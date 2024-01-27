@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Cascade';
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+body{
+	margin:0px;
+    padding:0px;
+}
+
+/* For mobile phones: */  
+p{font: 2.2rem 'PT Sans', sans-serif; padding: 0;margin:1vh;}
+h1{font: 4.6rem Cascade;}
+h2{font: 3.2rem Cascade;margin:1vh;}
+h3{padding:0;font:2.4rem Cascade;margin:1vh;}
+a{font: 2.4rem Cascade;margin:1vh;}
+li{font:2.2rem 'PT Sans', sans-serif;margin:0px;}
+img {
+    padding:2vw;max-width: 100%; height: auto; margin-left: auto; margin-right:auto; display: block;
+}
+
+.header{
+    color:rgb(95, 11, 0);
+    background-color: whitesmoke;
+    height: 10rem;
+    text-align: center;
+    position: sticky;
+    top:0;
+    z-index:100;
+    box-shadow: 0px 1rem 10rem black;
+}
+
+.left{
+    float:left;
+    width: 100%;
+    min-height: 7rem;
+    text-align: center;
+    background-color: rgb(125, 14, 0, 1);
+    padding:1rem;
+    
+}
+.right{
+    float:left;
+    width: 100%;
+    height:auto;
+    padding:1rem;
+
+    box-shadow: 0px 1rem 10rem black;
+}  
+
+
+a.offsetanchor{
+    display:block;
+    position:relative;
+    top:-10rem;
+    visibility: hidden;
+    margin:0px;
+}
+
+
+/*For desktop and bigger screens*/
+@media only screen and (min-width: 768px) {
+
+    a.offsetanchor{
+        display:block;
+        position:relative;
+        top:-10vh;
+        visibility: hidden;
+        margin:0px;
+    }
+
+    .role{min-height: 90vh;
+    width: 100%;}
+    .left{
+        height: 90vh;
+        width: 30%;
+        position: sticky; 
+        top:10rem;
+        padding:0vh;
+        text-align: center;
+        background-color: rgb(125, 14, 0, 0.0);
+    }
+
+
+    .right{
+        min-height:90vh;
+        height:fit-content;
+        width: 70%;
+        padding:6rem;
+        box-shadow: none;
+    }  
+
+    p{font:2.0rem 'PT Sans', sans-serif;}
+    h1{font:5.0rem Cascade;}
+    h2{font:3.0rem Cascade;}
+    h3{font:2.4rem Cascade;}
+    a{font:2.5rem Cascade;margin:1vh;}
+    li{font:2.2rem 'PT Sans', sans-serif;}
+
+    
+    .header{
+        color:rgb(95, 11, 0);
+        height: 10rem;
+        text-align: center;
+        position: sticky;
+        top:0;
+        z-index:100;
+        box-shadow: 0px 1rem 10rem black;
+    }
+    
+        
+}
+/*For largest screens*/
+@media only screen and (min-width: 1050px) {
+    p{font:2.5rem 'PT Sans', sans-serif;}
+    h1{font:5.0rem Cascade;}
+    h2{font:3.5rem Cascade;}
+    h3{font:3.0rem Cascade;}
+    a{font:3rem Cascade;margin:1vh;}
+    li{font:2.6rem 'PT Sans', sans-serif;}
+}
