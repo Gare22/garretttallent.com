@@ -3,14 +3,14 @@
 // that they need an Internet connection to run the project if desired.
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
-const CACHE_VERSION = "1710487238|12051586775";
-const CACHE_PREFIX = "SAO Floors MMO P-sw-cache-";
+const CACHE_VERSION = "1710534147|2497403475";
+const CACHE_PREFIX = "Fish Dodge-sw-cache-";
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
-const OFFLINE_URL = "build4.offline.html";
+const OFFLINE_URL = "build5.offline.html";
 // Files that will be cached on load.
-const CACHED_FILES = ["build4.html","build4.js","build4.offline.html","build4.icon.png","build4.apple-touch-icon.png","build4.worker.js","build4.audio.worklet.js"];
+const CACHED_FILES = ["build5.html","build5.js","build5.offline.html","build5.icon.png","build5.apple-touch-icon.png","build5.worker.js","build5.audio.worklet.js"];
 // Files that we might not want the user to preload, and will only be cached on first load.
-const CACHABLE_FILES = ["build4.wasm","build4.pck"];
+const CACHABLE_FILES = ["build5.wasm","build5.pck"];
 const FULL_CACHE = CACHED_FILES.concat(CACHABLE_FILES);
 
 self.addEventListener("install", (event) => {
