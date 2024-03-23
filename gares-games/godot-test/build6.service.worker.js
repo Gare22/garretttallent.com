@@ -3,14 +3,14 @@
 // that they need an Internet connection to run the project if desired.
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
-const CACHE_VERSION = "1710534147|2497403475";
+const CACHE_VERSION = "1711158108|108432780";
 const CACHE_PREFIX = "Fish Dodge-sw-cache-";
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
-const OFFLINE_URL = "build5.offline.html";
+const OFFLINE_URL = "build6.offline.html";
 // Files that will be cached on load.
-const CACHED_FILES = ["build5.html","build5.js","build5.offline.html","build5.icon.png","build5.apple-touch-icon.png","build5.worker.js","build5.audio.worklet.js"];
+const CACHED_FILES = ["build6.html","build6.js","build6.offline.html","build6.icon.png","build6.apple-touch-icon.png","build6.worker.js","build6.audio.worklet.js"];
 // Files that we might not want the user to preload, and will only be cached on first load.
-const CACHABLE_FILES = ["build5.wasm","build5.pck"];
+const CACHABLE_FILES = ["build6.wasm","build6.pck"];
 const FULL_CACHE = CACHED_FILES.concat(CACHABLE_FILES);
 
 self.addEventListener("install", (event) => {
