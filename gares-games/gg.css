@@ -1,11 +1,124 @@
-html, body {
-  margin: 0;
-  padding: 0;
-}
-canvas {
-  display: block;
+* {
+  margin:0;
+  padding:0;
 }
 
-a{
-  font-size: 50px;
+html, body {
+  height: 100%;
+}
+
+body{
+  background-color: #399548;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+header{
+  background-color: #454545;
+  max-height: 200px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+header img{
+  background-color: #454545;
+}
+
+main{
+  background-color: #e7ffe2;
+  margin: 0 10vw 0 10vw;
+}
+
+main .links{
+  margin: 50px 0 50px 0;
+  padding: 15px;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  gap:15px;
+}
+
+main .projects{
+  margin: 50px 0 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:3vw
+}
+
+main .projects .disabled{
+  background-color: red;
+}
+
+
+.square-anchor {
+  width: 22vw;
+  height: 22vw;
+  /*background-image: url('your-image.jpg'); /* Replace with your image path */
+  background-size: 100% 100%;
+  background-position: center;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.square-anchor p{
+  background-color: #3333335f;
+  color:rgb(233, 233, 233);
+  font-size: large;
+  display: inline-block;
+  padding: 6px;
+}
+
+.consumo{
+  background-image: url('consumo.png');
+}
+
+.electrician{
+  background-image: url('electrician.png');
+}
+
+.voidlings{
+  background-image: url('voidlings.png');
+}
+
+.hotdog{
+  background-image: url('hotdog.png');
+}
+
+.pinball{
+  background-image: url('pinball.png');
+}
+
+footer{
+  /*font-variant-caps: all-small-caps;*/
+  padding: 10px;
+  min-height: 50px;
+  background-color: #333;
+  color: #e0e0e0;
+  display: flex; /* Apply flexbox */
+  justify-content: center;
+  align-items: center; /* Center vertically */
+  gap:10vw;
+}
+
+footer nav {
+  display: inline-flex; /* Inline flexbox for spacing */
+  justify-content: space-between; /* Distribute links */
+  gap:1vw;
+}
+
+footer a {
+  text-decoration: none;
+  color: #e0e0e0;
+  
+  margin-left: 10px;  /* Optional spacing between links */
+  margin-right: 10px; /* Optional spacing between links */
+}
+
+footer a:hover {
+  color: #4f4f4f;
 }
