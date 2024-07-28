@@ -3,12 +3,19 @@
   padding:0;
 }
 
-html, body {
+html{
   height: 100%;
+  background-color: #333;
+}
+
+h1, h2{
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
 }
 
 body{
-  background-color: #399548;
+  background: linear-gradient(to right, #276531 0%, #389447 10%, #389447 90%, #276531 100%);
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
   display: grid;
@@ -16,24 +23,43 @@ body{
 }
 
 header{
-  background-color: #454545;
-  max-height: 200px;
-  padding: 30px;
+  background-color: #333;
+  max-height: 100px;
+  padding: 10px;
   display: flex;
-  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  /*filter: drop-shadow(0px 10px 10px #00000038);*/
+  border-bottom: 1px solid rgba(0, 0, 0, 0.822);
+}
+header img{
+  height: 100%;
 }
 
-header img{
-  background-color: #454545;
+header h1{
+  color:#399548;
 }
 
 main{
   background-color: #e7ffe2;
   margin: 0 10vw 0 10vw;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
+main h1{
+  margin-top: 30px;
+}
+
+main h2{
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+
 main .links{
-  margin: 50px 0 50px 0;
   padding: 15px;
   display:flex;
   align-items: center;
@@ -42,16 +68,14 @@ main .links{
 }
 
 main .projects{
-  margin: 50px 0 50px 0;
+  margin: 0 0 50px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap:3vw
 }
 
-main .projects .disabled{
-  background-color: red;
-}
+
 
 
 .square-anchor {
@@ -63,6 +87,10 @@ main .projects .disabled{
   text-decoration: none;
   display: inline-block;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.square-anchor .disabled{
+  background-color: red;
 }
 
 .square-anchor p{
@@ -94,11 +122,12 @@ main .projects .disabled{
 }
 
 footer{
+  border-top: 1px solid rgba(0, 0, 0, 0.822);
   /*font-variant-caps: all-small-caps;*/
   padding: 10px;
   min-height: 50px;
   background-color: #333;
-  color: #e0e0e0;
+  color: #399548;
   display: flex; /* Apply flexbox */
   justify-content: center;
   align-items: center; /* Center vertically */
@@ -113,7 +142,7 @@ footer nav {
 
 footer a {
   text-decoration: none;
-  color: #e0e0e0;
+  color: #399548;
   
   margin-left: 10px;  /* Optional spacing between links */
   margin-right: 10px; /* Optional spacing between links */
