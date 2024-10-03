@@ -1,3 +1,5 @@
 header set Cross-Origin-Opener-Policy: same-origin
 header set Cross-Origin-Embedder-Policy: require-corp
-header set Access-Control-Allow-Origin: https://html.itch.zone/html/11630654/index.html
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin: https://html.itch.zone/html/11630654/index.html https://html.itch.zone https://itch.io
+</IfModule>
