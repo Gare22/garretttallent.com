@@ -1,0 +1,2 @@
+header set Cross-Origin-Opener-Policy: same-origin
+header set Cross-Origin-Embedder-Policy: require-corp
