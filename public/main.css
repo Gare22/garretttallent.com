@@ -256,6 +256,10 @@ select:focus {
     background-color: transparent; /* Ensure the background of the element itself is transparent if desired */
 }
 
+#credits {
+    font-size: 1rem;
+    color:#7e7e7e;
+}
 
 /* Responsive design breakpoints */
 @media (max-width: 1000px) {
@@ -295,5 +299,10 @@ select:focus {
 @media (max-width: 480px) {
     html {
         font-size: 12px;
+    }
+
+    #credits {
+        font-size: 9px;
+        color:#7e7e7e;
     }
 }
