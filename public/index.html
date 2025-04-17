@@ -6,16 +6,176 @@
     <title>GarrettTallent.com</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 </head>
-<body>
-    <h1>GARRETT TALLENT</h1>
-    <br>
-    <a href="./gares-games/">Games?</a>
-    <br>
-    <a href="./chatgptpong/">ChatGPT Made PONG?</a>
-    <br>
-    <a href="./kaleidoscope/">Kaleidoscope?</a>
-    <br>
+<body id="top">
+    <div id="left">
+        <div>
+            <h1 id="name">Garrett Tallent</h1>
+            <!--<h4 id="title">Game Developer</h4>-->
+            <p id="tagline">I make games & stuff</p>
+        </div>
+        <div id="legend">
+            <a href="#top">About Me</a>
+            <a href="#gamedev">Game Dev</a>
+            <a href="#webdev">Web Dev</a>
+            <a href="#other">Other</a>
+            <a href="#contact">Contact Info</a>
+        </div>
+        <div id="socials">
+            <a href="https://gares-games.itch.io/" class="socials-link" target="_blank">
+                <img src="images/itchio-icon.svg" alt="Itch.io" class="socials-icon">
+            </a>
+            <a href="https://gares-games.itch.io/" class="socials-link" target="_blank">
+                <img src="images/itchio-icon.svg" alt="Itch.io" class="socials-icon">
+            </a>
+            <a href="https://gares-games.itch.io/" class="socials-link" target="_blank">
+                <img src="images/itchio-icon.svg" alt="Itch.io" class="socials-icon">
+            </a>
+        </div>
+    </div>
+    <div id="right">
+        <div id="about" class="legend-point">
+            <p>Hello there! I'm a passionate <a href="#gamedev"><b>game developer</b></a> dedicated to crafting engaging and innovative gaming experiences. 
+                My primary focus lies in creating multiplayer games.
+                <a href="#godot"><b>Godot</b></a> has been my main game engine for the past year, but I also have a few years experience 
+                creating with <a href="#unity"><b>Unity</b></a>. I'm particularly drawn to creating seamless web-friendly 
+                multiplayer environments, utilizing technologies like <a href="#websockets"><b>WebSockets</b></a> and <a href="#webrtc"><b>WebRTC</b></a> 
+                to connect players directly through their browsers. I thrive on the 
+                challenges of designing robust network architectures and ensuring smooth, 
+                low-latency gameplay for everyone.</p>
+            <p> I also have a solid foundation in <a hre="#webdev"><b>web development</b></a>, 
+                which helps in building comprehensive 
+                online experiences that complement my games. This background enables me to handle 
+                aspects like account management, leaderboards, and community features with a 
+                deeper understanding of web-based technologies, 
+                ensuring a cohesive and user-friendly ecosystem around my game projects.</p>
+            <p> As a <a href="#other"><b>hobbyist</b></a>, I've explored <a href="#3Dprinting"><b>3D printing</b></a> 
+                and <a href=""><b>CAD</b></a> (FreeCad & some SolidWorks), allowing me to bring digital designs into physical form. 
+                Additionally, I enjoy tinkering with <a href="#esp32"><b>microcontrollers</b></a> (Arduino and ESP32) on occasion. 
+                While these are more personal pursuits, they fuel my creativity and problem-solving skills.</p>
+            <p> Ultimately, I'm driven by a desire to create fun, accessible, and connected 
+                experiences for players. Whether it's building intricate multiplayer 
+                systems or exploring the potential of emerging technologies, 
+                I'm always eager to learn, experiment, and push the boundaries of what's 
+                possible in game development.</p>
+        </div>
+        <div id="projects">
+            <div id="gamedev" class="projects_subsection legend-point">
+                <h4 class="project_category_title">Game Dev</h4>
+                <h6 class="project_subcategory_title" id="godot">Godot</h6>
+                <div class="project" id="voidlings"></div>
+                <div class="project" id="archaeology"></div>
+                <div class="project" id="gems"></div>
+                <h6 class="project_subcategory_title" id="unity">Unity</h6>
+                <div class="project" id="consumo"></div>
+                <div class="project" id="hourglass"></div>
+                <div class="project" id="pinball"></div>
+            </div>
+            <div id="webdev" class="projects_subsection legend-point">
+                <h4 class="project_category_title">Web Dev</h4>
+                <div class="project" id="dhs"></div>
+                <div class="project" id="cascade"></div>
+                <div class="project" id="circl"></div>
+            </div>
+            <div id="other" class="projects_subsection legend-point">
+                <h4 class="project_category_title">Hobbies & Other Projects</h4>
+                <div class="project" id="3Dprinting"></div>
+                <div class="project" id="CAD"></div>
+                <div class="project" id="esp32"></div>
+            </div>
+        </div>
+        <div id="contact" class="legend-point">
+            <p>Want a website like this one? Call or text me at <b>(865)219-3225</b> for a quote.</p>
+        </div>
+        <div id="credits">
+            <span style="font-size: 12px; color:#7e7e7e;">Created using good ol' HTML, CSS, and JS</span>
+            <!--©2025 Gares Games LLC-->
+        </div>
+    </div>
+    <div class="mid-marker"></div>
+    <script>
+        //Gradient background scrolling effect
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY
+            const scrollHeight = document.documentElement.scrollHeight
+            const clientHeight = window.innerHeight
+            const scrollPercentage = (scrollY / (scrollHeight - clientHeight)) * 100;
+            const newY = 100 - scrollPercentage
+            document.documentElement.style.background = `radial-gradient(circle at 0% ${newY}%, #1a3c28 0%, #000000 100%) fixed`;
+        });
+    </script>
+    <script>
+        //legend link selector
+        /*const legend = document.getElementById('legend');
+        const links = legend.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', function(event) {
+                // Remove .selected class from all links within the legend
+                legend.querySelectorAll('a.selected').forEach(el => {
+                    el.classList.remove('selected');
+                });
+
+                // Add .selected class to the clicked link
+                link.classList.add('selected');
+            })
+        })
+        //legend link select on scroll
+        function checkVisibleDivs() {
+            const right = document.getElementById("right");
+            const divs = right.querySelectorAll('.legend-point'); // Or a more specific selector
+            const midScreen = document.documentElement.scrollTop + (window.innerHeight/2)
+
+        }
+
+        // Call the function on scroll and initial load
+        window.addEventListener('scroll', checkVisibleDivs);
+        */
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const isInViewport = function() {
+            const middleOfScreen = window.scrollY + window.innerHeight / 2;
+            const legend = document.getElementById('legend');
+            const links = legend.querySelectorAll('a');
+            const contentElements = document.querySelectorAll('.legend-point');
+            const numberOfElements = contentElements.length;
+            const middleScreenMarker = document.querySelector('.mid-marker');
+            const finalItemCheatGap = 50
+            //console.log(links)
+            //console.log(contentElements)
+            
+            //const middleOfScreen = 100;
+            if (middleScreenMarker) {
+                middleScreenMarker.style.top = middleOfScreen + 'px';
+            }
+
+            for (let index = 0; index < numberOfElements; index++) {
+                const element = contentElements[index];
+                if (element) {
+                    const elementHeight = element.offsetHeight;
+                    const topOfElement = element.offsetTop;
+                    const bottomOfElement = topOfElement + elementHeight;
+
+                    if ((middleOfScreen > topOfElement) && (middleOfScreen < bottomOfElement)) {
+                        links[index].classList.add('selected');
+                    } else {
+                        links[index].classList.remove('selected');
+                    }
+                }
+            }
+            console.log("Scroll Y: ", window.scrollY, " WindowInner: ", window.innerHeight, " Doc.ScrollHeight: ", document.documentElement.scrollHeight)
+            if (window.scrollY + window.innerHeight + finalItemCheatGap>= document.documentElement.scrollHeight) {
+                for (let index = 0; index < numberOfElements; index++) {
+                    links[index].classList.remove('selected');
+                }
+                links[numberOfElements-1].classList.add('selected')
+            }
+        }
+        window.addEventListener('scroll', isInViewport);
+        // Initial call in case some elements are in the viewport on load
+        isInViewport();
+    });
+    </script>
 </body>
 </html>
