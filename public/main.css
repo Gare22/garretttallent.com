@@ -228,21 +228,23 @@ select:focus {
 
 #projects{
     width: 100%;
+    margin-top: 6rem;
 }
 
 .projects_subsection{
-    margin-top:2rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
 
 .project_category_title{
-    margin-top: 4rem;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 0rem;
 }
 
 .project_subcategory_title{
     color:rgb(146, 146, 146);
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
 }
 
 .project{
