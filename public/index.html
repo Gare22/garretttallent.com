@@ -76,12 +76,14 @@
             </div>
             <div id="webdev" class="projects_subsection legend-point">
                 <h4 class="project_category_title">Web Dev</h4>
+                <h6 class="project_subcategory_title">&nbsp;</h6>
                 <div class="project" id="dhs"></div>
                 <div class="project" id="cascade"></div>
                 <div class="project" id="circl"></div>
             </div>
             <div id="other" class="projects_subsection legend-point">
                 <h4 class="project_category_title">Hobbies & Other Projects</h4>
+                <h6 class="project_subcategory_title">&nbsp;</h6>
                 <div class="project" id="3Dprinting"></div>
                 <div class="project" id="CAD"></div>
                 <div class="project" id="esp32"></div>
@@ -151,6 +153,8 @@
                 middleScreenMarker.style.top = middleOfScreen + 'px';
             }
 
+            selected_index = 0
+
             for (let index = 0; index < numberOfElements; index++) {
                 const element = contentElements[index];
                 if (element) {
@@ -159,18 +163,23 @@
                     const bottomOfElement = topOfElement + elementHeight;
 
                     if ((middleOfScreen > topOfElement) && (middleOfScreen < bottomOfElement)) {
-                        links[index].classList.add('selected');
-                    } else {
-                        links[index].classList.remove('selected');
+                        selected_index = index
                     }
                 }
             }
             if (window.scrollY + window.innerHeight + finalItemCheatGap>= document.documentElement.scrollHeight) {
-                for (let index = 0; index < numberOfElements; index++) {
-                    links[index].classList.remove('selected');
-                }
-                links[numberOfElements-1].classList.add('selected')
+                selected_index = numberOfElements-1
             }
+
+            //actually add the class
+            links[selected_index].classList.add('selected')
+            for (let index = 0; index < numberOfElements; index++) {
+                if(selected_index == index){
+                    continue;
+                }
+                links[index].classList.remove('selected');
+            }
+            
         }
         window.addEventListener('scroll', isInViewport);
         // Initial call in case some elements are in the viewport on load

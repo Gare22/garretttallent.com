@@ -218,6 +218,10 @@ select:focus {
     align-items: center; /* Center horizontally */
 }
 
+#about{
+    padding-bottom: 6rem;
+}
+
 #about a:hover {
     color:#572642;
 }
@@ -228,7 +232,6 @@ select:focus {
 
 #projects{
     width: 100%;
-    margin-top: 6rem;
 }
 
 .projects_subsection{
