@@ -9,6 +9,7 @@
 html {
     height: 100%;
     background: radial-gradient(circle at 0% 90%, #1a3c28 0%, #000000 100%) fixed;
+    background-color: #000000;
     font-size: 16px;
     scroll-behavior: smooth;
 }
@@ -245,15 +246,15 @@ select:focus {
     height: 10rem;
     border: 4px solid rgba(246, 246, 246, 0.3); /* Adjust color and opacity as needed */
     border-radius: 8px; /* Adjust the radius for more or less rounded corners */
-    background-color: transparent; /* Ensure the background of the element itself is transparent if desired */
+    /*background-color: transparent; /* Ensure the background of the element itself is transparent if desired */
 }
 
 .project:hover{
     margin-bottom: 3rem;
     height: 10rem;
-    border: 4px solid rgba(246, 246, 246, 0.5); /* Adjust color and opacity as needed */
+    border: 4px solid #5726428b;; /* Adjust color and opacity as needed */
     border-radius: 8px; /* Adjust the radius for more or less rounded corners */
-    background-color: transparent; /* Ensure the background of the element itself is transparent if desired */
+    /*background-color: transparent; /* Ensure the background of the element itself is transparent if desired */
 }
 
 #credits {
@@ -298,11 +299,14 @@ select:focus {
 
 @media (max-width: 480px) {
     html {
-        font-size: 12px;
+        font-size: 14px;
     }
-
+    #right{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
     #credits {
-        font-size: 9px;
+        font-size: 10px;
         color:#7e7e7e;
     }
 }
