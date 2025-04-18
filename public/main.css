@@ -24,6 +24,7 @@ html {
 }
 
 body {
+    background-color: transparent;
     height: 100%;
     line-height: 1.6;
     color: #e1e1e1;
@@ -140,12 +141,15 @@ select:focus {
 
 #legend a:hover{
     color: #e1e1e1;
+    padding-left: 1rem;
 }
 
 #legend .selected{
     color: #e1e1e1;
+    padding-left: 1rem;
 }
 
+/*
 #legend a::before{
     display: inline-block;
     content: "";
@@ -171,7 +175,7 @@ select:focus {
     width: 4rem;
     margin: 0 1rem;
     transform: translateY(-.35rem);
-}
+}*/
 
 #socials{
     margin-top:auto;
@@ -276,7 +280,8 @@ select:focus {
         width: 100%;
         height: 40%;
         position:inherit;
-        padding-left: 6rem;
+        margin:auto;
+        margin:auto;
         padding-top: 4rem;
     }
     
@@ -300,6 +305,9 @@ select:focus {
 @media (max-width: 480px) {
     html {
         font-size: 14px;
+    }
+    #left{
+        padding-left: 2rem;
     }
     #right{
         padding-left: 2rem;
