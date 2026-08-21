@@ -2,7 +2,7 @@
   {
     "id": "sheep",
     "name": "Sheep",
-    "price": 0,
+    "price": 1000,
     "puzzle_count": 4,
     "images": [
       "https://garretttallent.com/puzzles/sheep/2.png",
@@ -14,7 +14,7 @@
   {
     "id": "test",
     "name": "Test",
-    "price": 0,
+    "price": 1000,
     "puzzle_count": 1,
     "images": [
       "https://garretttallent.com/puzzles/test/Bigtoes-PixelArt-Background.png"
